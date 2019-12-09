@@ -12,3 +12,5 @@ VOLUME ["/app/public"]
 EXPOSE 3000
 
 CMD ["node", "/app/mini-webserver.js"]
+
+ADD index.html /app/public/index.html

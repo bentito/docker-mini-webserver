@@ -1,0 +1,9 @@
+aws --output json ecs describe-task-definition --task-definition tt_web_with_idx:2 > tt_web.json
+aws ecs register-task-definition --cli-input-json file://tt_web.json
+aws cloudformation create-stack --stack-name TofelTechWebCoreStack --capabilities CAPABILITY_NAMED_IAM --template-body file://cloud_formation_core.yml
+aws cloudformation describe-stacks --stack-name TofelTechWebCoreStack
+aws cloudformation describe-stacks --stack-name TofelTechWebCoreStack > TofelTechWebCoreStack_cloudformation_describe_output.json
+aws elbv2 create-load-balancer --name ttweb-nlb --scheme internet-facing --type network --subnets subnet-0ee67fb6d150dda93 subnet-01b06bcbddb30b28f > nlb-output.json
+aws elbv2 create-target-group --name TofelTechWeb-TargetGroup --port 3000 --protocol TCP --target-type ip --vpc-id vpc-0b355d996013670f0 --health-check-interval-seconds 10 --health-check-path / --health-check-protocol HTTP --healthy-threshold-count 3 --unhealthy-threshold-count 3 > target-group-output.json
+aws elbv2 create-listener --default-actions TargetGroupArn=arn:aws:elasticloadbalancing:us-east-2:016245963849:targetgroup/TofelTechWeb-TargetGroup/17a0453599ca22fa,Type=forward --load-balancer-arn arn:aws:elasticloadbalancing:us-east-2:016245963849:loadbalancer/net/ttweb-nlb/c01ae27255605b9f --port 80 --protocol TCP
+aws ecs create-service --cli-input-json file://tt_web_fargate_service_definition.json

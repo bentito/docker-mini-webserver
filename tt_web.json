@@ -1,0 +1,32 @@
+{
+    "family": "tt_web_new",
+    "cpu": "256",
+    "memory": "512",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "executionRoleArn": "arn:aws:iam::016245963849:role/ecsTaskExecutionRole",
+    "taskRoleArn": "arn:aws:iam::016245963849:role/ecsTaskExecutionRole",
+    "containerDefinitions": [
+        {
+            "name": "tt_mini_dockerhub",
+            "image": "docker.io/btofel/default:tt_mini_web",
+            "portMappings": [
+                {
+                    "containerPort": 3000,
+                    "protocol": "http"
+                }
+            ],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "tt-web-logs",
+                    "awslogs-region": "us-east-2",
+                    "awslogs-stream-prefix": "awslogs-tt-web-service"
+                }
+            },
+            "essential": true
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "Stacks": [
+        {
+            "StackId": "arn:aws:cloudformation:us-east-2:016245963849:stack/TofelTechWebCoreStack/cc243020-19ff-11ea-9907-063c30684966",
+            "StackName": "TofelTechWebCoreStack",
+            "Description": "This stack deploys the core network infrastructure and IAM resources to be used for a service hosted in Amazon ECS using AWS Fargate.",
+            "CreationTime": "2019-12-08T21:17:35.726000+00:00",
+            "RollbackConfiguration": {},
+            "StackStatus": "CREATE_COMPLETE",
+            "DisableRollback": false,
+            "NotificationARNs": [],
+            "Capabilities": [
+                "CAPABILITY_NAMED_IAM"
+            ],
+            "Outputs": [
+                {
+                    "OutputKey": "CurrentAccount",
+                    "OutputValue": "016245963849",
+                    "Description": "REPLACE_ME_ACCOUNT_ID",
+                    "ExportName": "TofelTechWebCoreStack:CurrentAccount"
+                },
+                {
+                    "OutputKey": "FargateContainerSecurityGroup",
+                    "OutputValue": "sg-0525fecb03fb0ad36",
+                    "Description": "REPLACE_ME_SECURITY_GROUP_ID",
+                    "ExportName": "TofelTechWebCoreStack:FargateContainerSecurityGroup"
+                },
+                {
+                    "OutputKey": "PublicSubnetOne",
+                    "OutputValue": "subnet-0ee67fb6d150dda93",
+                    "Description": "REPLACE_ME_PUBLIC_SUBNET_ONE",
+                    "ExportName": "TofelTechWebCoreStack:PublicSubnetOne"
+                },
+                {
+                    "OutputKey": "ECSTaskRole",
+                    "OutputValue": "arn:aws:iam::016245963849:role/TofelTechWebCoreStack-ECSTaskRole-1GFK8PW02S432",
+                    "Description": "REPLACE_ME_ECS_TASK_ROLE_ARN",
+                    "ExportName": "TofelTechWebCoreStack:ECSTaskRole"
+                },
+                {
+                    "OutputKey": "PrivateSubnetTwo",
+                    "OutputValue": "subnet-09e7970630534af81",
+                    "Description": "REPLACE_ME_PRIVATE_SUBNET_TWO",
+                    "ExportName": "TofelTechWebCoreStack:PrivateSubnetTwo"
+                },
+                {
+                    "OutputKey": "CurrentRegion",
+                    "OutputValue": "us-east-2",
+                    "Description": "REPLACE_ME_REGION",
+                    "ExportName": "TofelTechWebCoreStack:CurrentRegion"
+                },
+                {
+                    "OutputKey": "VPCId",
+                    "OutputValue": "vpc-0b355d996013670f0",
+                    "Description": "REPLACE_ME_VPC_ID",
+                    "ExportName": "TofelTechWebCoreStack:VPCId"
+                },
+                {
+                    "OutputKey": "PublicSubnetTwo",
+                    "OutputValue": "subnet-01b06bcbddb30b28f",
+                    "Description": "REPLACE_ME_PUBLIC_SUBNET_TWO",
+                    "ExportName": "TofelTechWebCoreStack:PublicSubnetTwo"
+                },
+                {
+                    "OutputKey": "EcsServiceRole",
+                    "OutputValue": "arn:aws:iam::016245963849:role/TofelTechWebCoreStack-EcsServiceRole-17LICRWPT4ON8",
+                    "Description": "REPLACE_ME_ECS_SERVICE_ROLE_ARN",
+                    "ExportName": "TofelTechWebCoreStack:EcsServiceRole"
+                },
+                {
+                    "OutputKey": "PrivateSubnetOne",
+                    "OutputValue": "subnet-057e6a15a356b4bc2",
+                    "Description": "REPLACE_ME_PRIVATE_SUBNET_ONE",
+                    "ExportName": "TofelTechWebCoreStack:PrivateSubnetOne"
+                }
+            ],
+            "Tags": [],
+            "EnableTerminationProtection": false,
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+{
+"service": {
+"serviceArn": "arn:aws:ecs:us-east-2:016245963849:service/TofelTechWeb-Service",
+"serviceName": "TofelTechWeb-Service",
+"clusterArn": "arn:aws:ecs:us-east-2:016245963849:cluster/default",
+"loadBalancers": [
+{
+"targetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:016245963849:targetgroup/TofelTechWeb-TargetGroup/17a0453599ca22fa",
+"containerName": "tt_mini_dockerhub",
+"containerPort": 3000
+}
+],
+"serviceRegistries": [],
+"status": "ACTIVE",
+"desiredCount": 1,
+"runningCount": 0,
+"pendingCount": 0,
+"launchType": "FARGATE",
+"platformVersion": "LATEST",
+"taskDefinition": "arn:aws:ecs:us-east-2:016245963849:task-definition/tt_web_new:1",
+"deploymentConfiguration": {
+"maximumPercent": 200,
+"minimumHealthyPercent": 0
+},
+"deployments": [
+{
+"id": "ecs-svc/9223370461013160070",
+"status": "PRIMARY",
+"taskDefinition": "arn:aws:ecs:us-east-2:016245963849:task-definition/tt_web_new:1",
+"desiredCount": 1,
+"pendingCount": 0,
+"runningCount": 0,
+"createdAt": "2019-12-08T16:46:55.737000-05:00",
+"updatedAt": "2019-12-08T16:46:55.737000-05:00",
+"launchType": "FARGATE",
+"platformVersion": "1.3.0",
+"networkConfiguration": {
+"awsvpcConfiguration": {
+"subnets": [
+"subnet-057e6a15a356b4bc2",
+"subnet-09e7970630534af81"
+],
+"securityGroups": [
+"sg-0525fecb03fb0ad36"
+],
+"assignPublicIp": "DISABLED"
+}
+}
+}
+],
+"roleArn": "arn:aws:iam::016245963849:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+"events": [],
+"createdAt": "2019-12-08T16:46:55.737000-05:00",
+"placementConstraints": [],
+"placementStrategy": [],
+"networkConfiguration": {
+"awsvpcConfiguration": {
+"subnets": [
+"subnet-057e6a15a356b4bc2",
+"subnet-09e7970630534af81"
+],
+"securityGroups": [
+"sg-0525fecb03fb0ad36"
+],
+"assignPublicIp": "DISABLED"
+}
+},
+"healthCheckGracePeriodSeconds": 0,
+"schedulingStrategy": "REPLICA",
+"enableECSManagedTags": false,
+"propagateTags": "NONE"
+}
+}

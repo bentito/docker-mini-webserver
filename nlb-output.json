@@ -1,0 +1,30 @@
+{
+    "LoadBalancers": [
+        {
+            "LoadBalancerArn": "arn:aws:elasticloadbalancing:us-east-2:016245963849:loadbalancer/net/ttweb-nlb/c01ae27255605b9f",
+            "DNSName": "ttweb-nlb-c01ae27255605b9f.elb.us-east-2.amazonaws.com",
+            "CanonicalHostedZoneId": "ZLMOA37VPKANP",
+            "CreatedTime": "2019-12-08T21:25:09.578000+00:00",
+            "LoadBalancerName": "ttweb-nlb",
+            "Scheme": "internet-facing",
+            "VpcId": "vpc-0b355d996013670f0",
+            "State": {
+                "Code": "provisioning"
+            },
+            "Type": "network",
+            "AvailabilityZones": [
+                {
+                    "ZoneName": "us-east-2a",
+                    "SubnetId": "subnet-0ee67fb6d150dda93",
+                    "LoadBalancerAddresses": []
+                },
+                {
+                    "ZoneName": "us-east-2b",
+                    "SubnetId": "subnet-01b06bcbddb30b28f",
+                    "LoadBalancerAddresses": []
+                }
+            ],
+            "IpAddressType": "ipv4"
+        }
+    ]
+}

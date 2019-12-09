@@ -1,0 +1,30 @@
+{
+  "serviceName": "TofelTechWeb-Service",
+  "cluster": "default",
+  "launchType": "FARGATE",
+  "deploymentConfiguration": {
+    "maximumPercent": 200,
+    "minimumHealthyPercent": 0
+  },
+  "desiredCount": 1,
+  "networkConfiguration": {
+    "awsvpcConfiguration": {
+      "assignPublicIp": "DISABLED",
+      "securityGroups": [
+        "sg-0525fecb03fb0ad36"
+      ],
+      "subnets": [
+        "subnet-057e6a15a356b4bc2",
+        "subnet-09e7970630534af81"
+      ]
+    }
+  },
+  "taskDefinition": "tt_web_new:1",
+  "loadBalancers": [
+    {
+      "containerName": "tt_mini_dockerhub",
+      "containerPort": 3000,
+      "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:016245963849:targetgroup/TofelTechWeb-TargetGroup/17a0453599ca22fa"
+    }
+  ]
+}
