@@ -1,0 +1,15 @@
+To change parameters of the web service, may need to edit:   
+Dockerfile
+package.json
+mini-webserver.js
+
+To build, tag and push changes to the docker image:
+docker build -t docker.io/btofel/default:tt_mini_web .
+docker login (dockerhub: username: btofel)
+docker push
+docker push btofel/default:tt_mini_web
+
+Run web server to test locally
+docker run -p 80:80 btofel/default:tt_mini_web
+
+curl localhost:80

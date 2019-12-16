@@ -9,7 +9,7 @@ RUN cd /app && npm install
 
 VOLUME ["/app/public"]
 
-EXPOSE 3000
+EXPOSE 80
 
 CMD ["node", "/app/mini-webserver.js"]
 

@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var morgan = require('morgan');
 
-var port = process.env.PORT0 || 3000;
+var port = process.env.PORT0 || 80;
 var host = process.env.HOST || "0.0.0.0";
 
 app.use(morgan('combined'));
